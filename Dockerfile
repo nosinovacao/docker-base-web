@@ -1,4 +1,4 @@
-FROM node:12.13.1-alpine
+FROM node:14.16.1-alpine
 
 RUN \
   echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
@@ -17,7 +17,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install -g @angular/cli@11.2.0
+RUN npm install -g @angular/cli@13.2.6
 
 RUN npm install -g typescript
 
